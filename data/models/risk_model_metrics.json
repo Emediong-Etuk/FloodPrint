@@ -1,0 +1,592 @@
+{
+  "models": {
+    "climatology_logreg": {
+      "test": {
+        "n": 116577,
+        "positives": 230,
+        "prevalence": 0.0019729449205246317,
+        "roc_auc": 0.7991087380665258,
+        "pr_auc": 0.005323028297846117,
+        "brier": 0.0019665216287291995,
+        "brier_skill_vs_base_rate": 0.0012937619941119083,
+        "threshold": 0.0032699522706740288,
+        "accuracy": 0.9301320157492473,
+        "precision": 0.006976454466176654,
+        "recall": 0.24347826086956523,
+        "f1": 0.013564248516410318,
+        "false_negative_rate": 0.7565217391304347,
+        "confusion_matrix": {
+          "tn": 108376,
+          "fp": 7971,
+          "fn": 174,
+          "tp": 56
+        },
+        "calibration": [
+          {
+            "mean_predicted": 3.5481133487476973e-05,
+            "observed_rate": 0.0,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 5.298323053339139e-05,
+            "observed_rate": 0.0,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 7.894412520257389e-05,
+            "observed_rate": 0.0,
+            "count": 11656
+          },
+          {
+            "mean_predicted": 0.0001363663323541841,
+            "observed_rate": 0.0,
+            "count": 11659
+          },
+          {
+            "mean_predicted": 0.0002616906902455123,
+            "observed_rate": 0.0,
+            "count": 11656
+          },
+          {
+            "mean_predicted": 0.0005268562001709018,
+            "observed_rate": 0.002830917045552029,
+            "count": 11657
+          },
+          {
+            "mean_predicted": 0.00102404733372294,
+            "observed_rate": 0.001887116143420827,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.001751152781741816,
+            "observed_rate": 0.004803980440936776,
+            "count": 11657
+          },
+          {
+            "mean_predicted": 0.0024873923023220057,
+            "observed_rate": 0.003087743374217343,
+            "count": 11659
+          },
+          {
+            "mean_predicted": 0.003700216367114909,
+            "observed_rate": 0.007118963890556652,
+            "count": 11659
+          }
+        ]
+      },
+      "features": [
+        "doy_sin",
+        "doy_cos",
+        "prior_events_5y",
+        "elevation_m"
+      ]
+    },
+    "xgboost": {
+      "test": {
+        "n": 116577,
+        "positives": 230,
+        "prevalence": 0.0019729449205246317,
+        "roc_auc": 0.7763242153064615,
+        "pr_auc": 0.01019092447330486,
+        "brier": 0.0019669795539250406,
+        "brier_skill_vs_base_rate": 0.0010612027672285418,
+        "threshold": 0.008405467769696301,
+        "accuracy": 0.9896291721351553,
+        "precision": 0.01678183613030602,
+        "recall": 0.07391304347826087,
+        "f1": 0.027353177795655673,
+        "false_negative_rate": 0.9260869565217391,
+        "confusion_matrix": {
+          "tn": 115351,
+          "fp": 996,
+          "fn": 213,
+          "tp": 17
+        },
+        "calibration": [
+          {
+            "mean_predicted": 6.449667142476374e-05,
+            "observed_rate": 0.0,
+            "count": 11657
+          },
+          {
+            "mean_predicted": 9.76433695919199e-05,
+            "observed_rate": 0.0,
+            "count": 11625
+          },
+          {
+            "mean_predicted": 0.00013570148794640649,
+            "observed_rate": 0.0,
+            "count": 11672
+          },
+          {
+            "mean_predicted": 0.0001743697162271888,
+            "observed_rate": 0.00034261241970021415,
+            "count": 11675
+          },
+          {
+            "mean_predicted": 0.00023540179112067116,
+            "observed_rate": 0.0011151140847486705,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.00035207615899416207,
+            "observed_rate": 0.0018011836349601166,
+            "count": 11659
+          },
+          {
+            "mean_predicted": 0.0005516636548094892,
+            "observed_rate": 0.001972894149939955,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.0009887660970863818,
+            "observed_rate": 0.005490263361070601,
+            "count": 11657
+          },
+          {
+            "mean_predicted": 0.0020136295206151225,
+            "observed_rate": 0.00454623434551381,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.005294852557343129,
+            "observed_rate": 0.004460456338994682,
+            "count": 11658
+          }
+        ]
+      },
+      "features": [
+        "rain_1d",
+        "rain_3d",
+        "rain_7d",
+        "rain_14d",
+        "rain_30d",
+        "max_daily_7d",
+        "wet_days_7d",
+        "fcst_3d",
+        "fcst_7d",
+        "fcst_max_daily_7d",
+        "doy_sin",
+        "doy_cos",
+        "elevation_m",
+        "prior_events_5y"
+      ]
+    },
+    "random_forest": {
+      "validation": {
+        "n": 87730,
+        "positives": 77,
+        "prevalence": 0.0008776929214635814,
+        "roc_auc": 0.7720538676638298,
+        "pr_auc": 0.010997387398374449,
+        "brier": 0.0008755405066509062,
+        "brier_skill_vs_base_rate": 0.0026371901344779403,
+        "threshold": 0.005088106117097298,
+        "accuracy": 0.9969907671264105,
+        "precision": 0.03015075376884422,
+        "recall": 0.07792207792207792,
+        "f1": 0.043478260869565216,
+        "false_negative_rate": 0.922077922077922,
+        "confusion_matrix": {
+          "tn": 87460,
+          "fp": 193,
+          "fn": 71,
+          "tp": 6
+        },
+        "calibration": [
+          {
+            "mean_predicted": 1.3822089316955832e-05,
+            "observed_rate": 0.0,
+            "count": 4946
+          },
+          {
+            "mean_predicted": 8.015277552219235e-05,
+            "observed_rate": 0.0006795456751771673,
+            "count": 10301
+          },
+          {
+            "mean_predicted": 0.00015615310194873222,
+            "observed_rate": 0.0,
+            "count": 10542
+          },
+          {
+            "mean_predicted": 0.0002878870835843781,
+            "observed_rate": 0.0003225806451612903,
+            "count": 9300
+          },
+          {
+            "mean_predicted": 0.0005123637786860962,
+            "observed_rate": 0.00045578851412944393,
+            "count": 8776
+          },
+          {
+            "mean_predicted": 0.0007587159716603667,
+            "observed_rate": 0.0,
+            "count": 8773
+          },
+          {
+            "mean_predicted": 0.0009899514874947553,
+            "observed_rate": 0.00022797218739313804,
+            "count": 8773
+          },
+          {
+            "mean_predicted": 0.0012621312071753505,
+            "observed_rate": 0.0018237774991451043,
+            "count": 8773
+          },
+          {
+            "mean_predicted": 0.001771294294624967,
+            "observed_rate": 0.0012538470306622592,
+            "count": 8773
+          },
+          {
+            "mean_predicted": 0.00320888072590866,
+            "observed_rate": 0.0038755271856833464,
+            "count": 8773
+          }
+        ]
+      },
+      "test": {
+        "n": 116577,
+        "positives": 230,
+        "prevalence": 0.0019729449205246317,
+        "roc_auc": 0.7577625924847747,
+        "pr_auc": 0.004479873226755356,
+        "brier": 0.0019679570972360406,
+        "brier_skill_vs_base_rate": 0.000564753306234067,
+        "threshold": 0.005088106117097298,
+        "accuracy": 0.9949561234205718,
+        "precision": 0.01358695652173913,
+        "recall": 0.021739130434782608,
+        "f1": 0.016722408026755852,
+        "false_negative_rate": 0.9782608695652174,
+        "confusion_matrix": {
+          "tn": 115984,
+          "fp": 363,
+          "fn": 225,
+          "tp": 5
+        },
+        "calibration": [
+          {
+            "mean_predicted": 1.202549785388062e-05,
+            "observed_rate": 0.0,
+            "count": 4561
+          },
+          {
+            "mean_predicted": 9.166304497523341e-05,
+            "observed_rate": 0.0,
+            "count": 18526
+          },
+          {
+            "mean_predicted": 0.00017026897984945424,
+            "observed_rate": 0.0,
+            "count": 8621
+          },
+          {
+            "mean_predicted": 0.00031377766366723673,
+            "observed_rate": 0.0,
+            "count": 14923
+          },
+          {
+            "mean_predicted": 0.0005930373220737937,
+            "observed_rate": 0.0,
+            "count": 11657
+          },
+          {
+            "mean_predicted": 0.0008184563059769748,
+            "observed_rate": 0.003088008234688626,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.0010528204778572918,
+            "observed_rate": 0.004288900325956425,
+            "count": 11658
+          },
+          {
+            "mean_predicted": 0.0013505281250085013,
+            "observed_rate": 0.0045520913853817745,
+            "count": 11643
+          },
+          {
+            "mean_predicted": 0.0020007417453075617,
+            "observed_rate": 0.004026730637422892,
+            "count": 11672
+          },
+          {
+            "mean_predicted": 0.0034570135452355127,
+            "observed_rate": 0.003774232286841654,
+            "count": 11658
+          }
+        ]
+      },
+      "features": [
+        "rain_1d",
+        "rain_3d",
+        "rain_7d",
+        "rain_14d",
+        "rain_30d",
+        "max_daily_7d",
+        "wet_days_7d",
+        "fcst_3d",
+        "fcst_7d",
+        "fcst_max_daily_7d",
+        "doy_sin",
+        "doy_cos",
+        "elevation_m",
+        "prior_events_5y"
+      ]
+    }
+  },
+  "spatial_holdout_nigeria": {
+    "description": "Random Forest trained without any Nigerian station; tested on Nigerian stations 2017-2021.",
+    "train_stations": 78,
+    "test_stations": 6,
+    "test": {
+      "n": 2414,
+      "positives": 6,
+      "prevalence": 0.0024855012427506215,
+      "roc_auc": 0.9857419712070875,
+      "pr_auc": 0.09013404485102598,
+      "brier": 0.0024675177757456533,
+      "brier_skill_vs_base_rate": 0.004927612061548681,
+      "threshold": 0.0051982651764571055,
+      "accuracy": 0.9954432477216238,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_negative_rate": 1.0,
+      "confusion_matrix": {
+        "tn": 2403,
+        "fp": 5,
+        "fn": 6,
+        "tp": 0
+      },
+      "calibration": [
+        {
+          "mean_predicted": 0.00014557401584296346,
+          "observed_rate": 0.0,
+          "count": 242
+        },
+        {
+          "mean_predicted": 0.0002899336334411895,
+          "observed_rate": 0.0,
+          "count": 240
+        },
+        {
+          "mean_predicted": 0.00039900246360702205,
+          "observed_rate": 0.0,
+          "count": 242
+        },
+        {
+          "mean_predicted": 0.0005435677510094724,
+          "observed_rate": 0.0,
+          "count": 223
+        },
+        {
+          "mean_predicted": 0.0006882669118121025,
+          "observed_rate": 0.0,
+          "count": 260
+        },
+        {
+          "mean_predicted": 0.0009013575447597625,
+          "observed_rate": 0.0,
+          "count": 241
+        },
+        {
+          "mean_predicted": 0.001123836248328743,
+          "observed_rate": 0.0,
+          "count": 242
+        },
+        {
+          "mean_predicted": 0.0013751761067676812,
+          "observed_rate": 0.0,
+          "count": 241
+        },
+        {
+          "mean_predicted": 0.0019016574753700358,
+          "observed_rate": 0.0,
+          "count": 241
+        },
+        {
+          "mean_predicted": 0.0032889917325645544,
+          "observed_rate": 0.024793388429752067,
+          "count": 242
+        }
+      ]
+    }
+  },
+  "port_harcourt_station_test": {
+    "rows": 266,
+    "positives": 0,
+    "metrics": null
+  },
+  "rolling_origin_validation": [
+    {
+      "train_end": "2008-12-31",
+      "validate_until": "2012-12-31",
+      "positives": 200,
+      "random_forest": {
+        "roc_auc": 0.8203777076441436,
+        "pr_auc": 0.009153798518542373
+      },
+      "climatology_logreg": {
+        "roc_auc": 0.792144441487002,
+        "pr_auc": 0.006372690406957388
+      }
+    },
+    {
+      "train_end": "2012-12-31",
+      "validate_until": "2016-12-31",
+      "positives": 77,
+      "random_forest": {
+        "roc_auc": 0.7720538676638298,
+        "pr_auc": 0.010997387398374449
+      },
+      "climatology_logreg": {
+        "roc_auc": 0.8325675727533052,
+        "pr_auc": 0.0030708993320567035
+      }
+    }
+  ],
+  "permutation_importance": [
+    {
+      "feature": "doy_sin",
+      "label": "Season (day-of-year, sine)",
+      "auc_drop_mean": 0.043595483547020954,
+      "auc_drop_std": 0.0011373324713644258
+    },
+    {
+      "feature": "doy_cos",
+      "label": "Season (day-of-year, cosine)",
+      "auc_drop_mean": 0.02958671828607558,
+      "auc_drop_std": 0.010826717420435006
+    },
+    {
+      "feature": "fcst_max_daily_7d",
+      "label": "Heaviest forecast day, next 7 days (mm)",
+      "auc_drop_mean": 0.012498167299644111,
+      "auc_drop_std": 0.003325839725031269
+    },
+    {
+      "feature": "fcst_7d",
+      "label": "Forecast rainfall, next 7 days (mm)",
+      "auc_drop_mean": 0.010810785693974053,
+      "auc_drop_std": 0.0018951616243339379
+    },
+    {
+      "feature": "rain_30d",
+      "label": "Rainfall, last 30 days (mm)",
+      "auc_drop_mean": 0.010637540081180378,
+      "auc_drop_std": 0.0007563853664094102
+    },
+    {
+      "feature": "max_daily_7d",
+      "label": "Heaviest single day, last 7 days (mm)",
+      "auc_drop_mean": 0.0024542145692555417,
+      "auc_drop_std": 0.0009748791634361588
+    },
+    {
+      "feature": "rain_1d",
+      "label": "Rainfall today (mm)",
+      "auc_drop_mean": -0.000779121726589597,
+      "auc_drop_std": 0.00038761040445740055
+    },
+    {
+      "feature": "rain_14d",
+      "label": "Rainfall, last 14 days (mm)",
+      "auc_drop_mean": -0.002150580699481116,
+      "auc_drop_std": 0.004462281897493765
+    },
+    {
+      "feature": "elevation_m",
+      "label": "Ground elevation (m)",
+      "auc_drop_mean": -0.0029440196605112767,
+      "auc_drop_std": 0.0023405159931457584
+    },
+    {
+      "feature": "rain_3d",
+      "label": "Rainfall, last 3 days (mm)",
+      "auc_drop_mean": -0.0034899615194250813,
+      "auc_drop_std": 0.0010115877155857944
+    },
+    {
+      "feature": "prior_events_5y",
+      "label": "Large recorded floods nearby, previous 5 years",
+      "auc_drop_mean": -0.004026846017506765,
+      "auc_drop_std": 0.002623324009989789
+    },
+    {
+      "feature": "rain_7d",
+      "label": "Rainfall, last 7 days (mm)",
+      "auc_drop_mean": -0.007127388194900071,
+      "auc_drop_std": 0.0005342111615298991
+    },
+    {
+      "feature": "wet_days_7d",
+      "label": "Wet days (>= 1 mm), last 7 days",
+      "auc_drop_mean": -0.007163853507000699,
+      "auc_drop_std": 0.0002455654872974906
+    },
+    {
+      "feature": "fcst_3d",
+      "label": "Forecast rainfall, next 3 days (mm)",
+      "auc_drop_mean": -0.007821998140599326,
+      "auc_drop_std": 0.0008761553891635578
+    }
+  ],
+  "metadata": {
+    "model_version": "rf-dfo-gsod-20261104",
+    "trained_at": "2026-11-04T13:37:24+00:00",
+    "target": "DFO large-flood onset within 7 days inside event influence radius",
+    "prediction_window_days": 7,
+    "train_period": [
+      "1995-01-24",
+      "2012-12-31"
+    ],
+    "validation_period": [
+      "2013-01-01",
+      "2016-12-31"
+    ],
+    "test_period": [
+      "2017-01-01",
+      "2021-09-30"
+    ],
+    "train_base_rate": 0.001843613271914574,
+    "stations_used": 102,
+    "rows": {
+      "train": 190387,
+      "validation": 87730,
+      "test": 116577
+    },
+    "positives": {
+      "train": 351,
+      "validation": 77,
+      "test": 230
+    },
+    "dfo_events_in_region": 186,
+    "decision_threshold": 0.005088106117097298,
+    "seed": 42,
+    "rf_params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced_subsample",
+      "criterion": "gini",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": 0.5,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 300,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 300,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "rainfall_aggregation": "mean of quality-checked GSOD stations within 100 km"
+  }
+}

@@ -1,0 +1,19 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+streamlit>=1.40
+streamlit-folium>=0.22
+folium>=0.17
+plotly>=5.22
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+xgboost>=2.1
+torch>=2.3
+open_clip_torch>=2.26
+pillow>=10.3
+imagehash>=4.3
+joblib>=1.4
+requests>=2.32
+python-dotenv>=1.0
+openpyxl>=3.1
+shapely>=2.0
+pytest>=8.0
