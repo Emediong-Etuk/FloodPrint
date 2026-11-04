@@ -1,0 +1,38 @@
+{
+  "id": "port_harcourt",
+  "name": "Port Harcourt",
+  "admin_area": "Rivers State, Nigeria",
+  "country_code": "NG",
+  "timezone": "Africa/Lagos",
+  "center": {"lat": 4.8156, "lon": 7.0122},
+  "default_zoom": 12,
+  "bbox": {"min_lat": 4.70, "max_lat": 4.95, "min_lon": 6.85, "max_lon": 7.15},
+  "reference_station": {
+    "source": "NOAA Global Surface Summary of the Day (GSOD)",
+    "id": "65250099999",
+    "name": "PORT HARCOURT INTL",
+    "lat": 5.015,
+    "lon": 6.95
+  },
+  "coordinate_note": "Neighbourhood points are approximate centroids used for monitoring and weather lookups. They are not surveyed boundaries.",
+  "locations": [
+    {"name": "Mile 1 Diobu", "lat": 4.7905, "lon": 6.9960},
+    {"name": "D-Line", "lat": 4.8060, "lon": 7.0010},
+    {"name": "Old GRA", "lat": 4.7840, "lon": 7.0100},
+    {"name": "GRA Phase 2", "lat": 4.8180, "lon": 6.9950},
+    {"name": "Rumuola", "lat": 4.8370, "lon": 7.0040},
+    {"name": "Rumuokoro", "lat": 4.8690, "lon": 6.9970},
+    {"name": "Trans-Amadi", "lat": 4.8100, "lon": 7.0350},
+    {"name": "Borokiri", "lat": 4.7570, "lon": 7.0350},
+    {"name": "Rumuomasi", "lat": 4.8300, "lon": 7.0220},
+    {"name": "Ada George", "lat": 4.8440, "lon": 6.9790},
+    {"name": "Eliozu", "lat": 4.8640, "lon": 7.0300},
+    {"name": "Woji", "lat": 4.8300, "lon": 7.0600},
+    {"name": "Elelenwo", "lat": 4.8420, "lon": 7.0750},
+    {"name": "Choba", "lat": 4.8960, "lon": 6.9000},
+    {"name": "Rumuigbo", "lat": 4.8460, "lon": 6.9930},
+    {"name": "Ogbunabali", "lat": 4.8000, "lon": 7.0420},
+    {"name": "Abuloma", "lat": 4.7780, "lon": 7.0650},
+    {"name": "Rumuodara", "lat": 4.8650, "lon": 7.0450}
+  ]
+}

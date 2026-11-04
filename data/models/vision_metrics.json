@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "version": "oi-linear-20261104",
+    "trained_at": "2026-11-04T13:32:40+00:00",
+    "backbone": {
+      "arch": "ViT-B-32-quickgelu",
+      "pretrained": "laion400m_e32",
+      "weights_url": "https://github.com/mlfoundations/open_clip/releases/download/v0.2-weights/vit_b_32-quickgelu-laion400m_e32-46683a32.pt"
+    },
+    "classifier": {
+      "type": "LogisticRegression",
+      "C": 30.0,
+      "class_weight": "balanced"
+    },
+    "dataset": {
+      "source": "Open Images V7 human-verified image-level labels",
+      "license": "Annotations CC BY 4.0 (Google); images listed as CC BY 2.0 by their authors",
+      "manifest": "data/processed/vision_dataset_manifest.csv",
+      "counts": {
+        "test": {
+          "flooding": 30,
+          "no_flooding": 194,
+          "waterlogging": 11
+        },
+        "train": {
+          "flooding": 132,
+          "no_flooding": 883,
+          "waterlogging": 74
+        },
+        "val": {
+          "flooding": 25,
+          "no_flooding": 199,
+          "waterlogging": 14
+        }
+      }
+    },
+    "classes": [
+      "no_flooding",
+      "waterlogging",
+      "flooding"
+    ]
+  },
+  "held_out_test": {
+    "n": 235,
+    "class_counts": {
+      "no_flooding": 194,
+      "waterlogging": 11,
+      "flooding": 30
+    },
+    "accuracy": 0.8978723404255319,
+    "macro_f1": 0.7836257627806525,
+    "per_class": {
+      "no_flooding": {
+        "precision": 0.9672131147540983,
+        "recall": 0.9123711340206185,
+        "f1-score": 0.9389920424403183
+      },
+      "waterlogging": {
+        "precision": 0.47619047619047616,
+        "recall": 0.9090909090909091,
+        "f1-score": 0.625
+      },
+      "flooding": {
+        "precision": 0.7741935483870968,
+        "recall": 0.8,
+        "f1-score": 0.7868852459016393
+      }
+    },
+    "confusion_matrix": [
+      [
+        177,
+        10,
+        7
+      ],
+      [
+        1,
+        10,
+        0
+      ],
+      [
+        5,
+        1,
+        24
+      ]
+    ],
+    "binary_flooding": {
+      "precision": 0.7741935483870968,
+      "recall": 0.8,
+      "f1": 0.7868852459016393,
+      "false_negative_rate": 0.2,
+      "roc_auc": 0.9744715447154471,
+      "confusion": {
+        "tn": 198,
+        "fp": 7,
+        "fn": 6,
+        "tp": 24
+      }
+    },
+    "water_vs_dry_roc_auc": 0.961025898918783
+  },
+  "cross_validation_5fold": {
+    "n": 1562,
+    "class_counts": {
+      "no_flooding": 1276,
+      "waterlogging": 99,
+      "flooding": 187
+    },
+    "accuracy": 0.8988476312419974,
+    "macro_f1": 0.7995635510076836,
+    "per_class": {
+      "no_flooding": {
+        "precision": 0.9612850082372323,
+        "recall": 0.914576802507837,
+        "f1-score": 0.9373493975903614
+      },
+      "waterlogging": {
+        "precision": 0.6166666666666667,
+        "recall": 0.7474747474747475,
+        "f1-score": 0.6757990867579908
+      },
+      "flooding": {
+        "precision": 0.7149122807017544,
+        "recall": 0.8716577540106952,
+        "f1-score": 0.7855421686746988
+      }
+    },
+    "confusion_matrix": [
+      [
+        1167,
+        45,
+        64
+      ],
+      [
+        24,
+        74,
+        1
+      ],
+      [
+        23,
+        1,
+        163
+      ]
+    ],
+    "binary_flooding": {
+      "precision": 0.7149122807017544,
+      "recall": 0.8716577540106952,
+      "f1": 0.7855421686746988,
+      "false_negative_rate": 0.12834224598930483,
+      "roc_auc": 0.9772795333009237,
+      "confusion": {
+        "tn": 1310,
+        "fp": 65,
+        "fn": 24,
+        "tp": 163
+      }
+    },
+    "water_vs_dry_roc_auc": 0.9452506740907995,
+    "bootstrap_95ci": {
+      "flood_recall": [
+        0.8199802259887006,
+        0.9175257731958762
+      ],
+      "macro_f1": [
+        0.7688382549973195,
+        0.8306934479747529
+      ]
+    }
+  },
+  "zero_shot_baseline": {
+    "test": {
+      "n": 235,
+      "class_counts": {
+        "no_flooding": 194,
+        "waterlogging": 11,
+        "flooding": 30
+      },
+      "accuracy": 0.6510638297872341,
+      "macro_f1": 0.5566971264440858,
+      "per_class": {
+        "no_flooding": {
+          "precision": 0.9914529914529915,
+          "recall": 0.5979381443298969,
+          "f1-score": 0.7459807073954984
+        },
+        "waterlogging": {
+          "precision": 0.30303030303030304,
+          "recall": 0.9090909090909091,
+          "f1-score": 0.45454545454545453
+        },
+        "flooding": {
+          "precision": 0.3176470588235294,
+          "recall": 0.9,
+          "f1-score": 0.46956521739130436
+        }
+      },
+      "confusion_matrix": [
+        [
+          116,
+          21,
+          57
+        ],
+        [
+          0,
+          10,
+          1
+        ],
+        [
+          1,
+          2,
+          27
+        ]
+      ],
+      "binary_flooding": {
+        "precision": 0.3176470588235294,
+        "recall": 0.9,
+        "f1": 0.46956521739130436,
+        "false_negative_rate": 0.1,
+        "roc_auc": 0.9240650406504065,
+        "confusion": {
+          "tn": 147,
+          "fp": 58,
+          "fn": 3,
+          "tp": 27
+        }
+      },
+      "water_vs_dry_roc_auc": 0.9250691475986925
+    },
+    "all_images": {
+      "n": 1562,
+      "class_counts": {
+        "no_flooding": 1276,
+        "waterlogging": 99,
+        "flooding": 187
+      },
+      "accuracy": 0.6670934699103713,
+      "macro_f1": 0.5730456930745808,
+      "per_class": {
+        "no_flooding": {
+          "precision": 0.976456009913259,
+          "recall": 0.6175548589341693,
+          "f1-score": 0.756601056168987
+        },
+        "waterlogging": {
+          "precision": 0.3225806451612903,
+          "recall": 0.8080808080808081,
+          "f1-score": 0.4610951008645533
+        },
+        "flooding": {
+          "precision": 0.3431952662721893,
+          "recall": 0.93048128342246,
+          "f1-score": 0.5014409221902018
+        }
+      },
+      "confusion_matrix": [
+        [
+          788,
+          159,
+          329
+        ],
+        [
+          15,
+          80,
+          4
+        ],
+        [
+          4,
+          9,
+          174
+        ]
+      ],
+      "binary_flooding": {
+        "precision": 0.3431952662721893,
+        "recall": 0.93048128342246,
+        "f1": 0.5014409221902018,
+        "false_negative_rate": 0.06951871657754011,
+        "roc_auc": 0.9371356344190569,
+        "confusion": {
+          "tn": 1042,
+          "fp": 333,
+          "fn": 13,
+          "tp": 174
+        }
+      },
+      "water_vs_dry_roc_auc": 0.9056903128219743
+    }
+  },
+  "cv_selection_macro_f1": 0.8127194321815348
+}

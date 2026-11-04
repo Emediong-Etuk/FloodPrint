@@ -1,0 +1,24 @@
+{
+  "dfo": {
+    "url": "https://raw.githubusercontent.com/Asfandyarriaz/Statistical-Analysis-of-the-Relationship-Between-Global-Warming-and-Flood-Frequency/main/FloodArchive.xlsx",
+    "sha256": "0ec9159da7a16d140872ffa991c0b052b330868a00bf701c0ce2906e0904e8ea",
+    "events": 5130,
+    "began_min": "1985-01-01",
+    "began_max": "2021-10-06"
+  },
+  "gsod": {
+    "source": "NOAA GSOD via s3://noaa-gsod-pds",
+    "stations": 172,
+    "rows": 782085,
+    "years": [
+      1995,
+      2021
+    ],
+    "bbox": {
+      "min_lat": 0.0,
+      "max_lat": 16.0,
+      "min_lon": -18.0,
+      "max_lon": 16.0
+    }
+  }
+}
