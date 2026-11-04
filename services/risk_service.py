@@ -112,7 +112,7 @@ class RiskService:
                 LiveFeatureInput(
                     past_daily_mm=snap.past_daily,
                     forecast_daily_mm=snap.forecast_daily,
-                    day_of_year=int(today.dayofyear),
+                    day_of_year=int(today.day_of_year),
                     elevation_m=snap.elevation_m,
                     prior_events_5y=prior,
                 )

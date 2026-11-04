@@ -101,7 +101,7 @@ def build_daily_features(rain: pd.Series) -> pd.DataFrame:
     out["fcst_3d"] = f3
     out["fcst_7d"] = f7
     out["fcst_max_daily_7d"] = fmax
-    s, c = season_features(out.index.dayofyear.values)
+    s, c = season_features(out.index.day_of_year.values)
     out["doy_sin"] = s
     out["doy_cos"] = c
     return out

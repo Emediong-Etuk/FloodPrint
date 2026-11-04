@@ -33,7 +33,7 @@ if up is not None:
     if vimg:
         key = f"vision_{hash(data)}"
         c1, c2 = st.columns([1, 1], gap="medium")
-        c1.image(vimg.image, caption=f"{vimg.width}x{vimg.height} {vimg.format}", use_container_width=True)
+        c1.image(vimg.image, caption=f"{vimg.width}x{vimg.height} {vimg.format}", width="stretch")
         with c2:
             if key not in st.session_state:
                 try:
@@ -60,7 +60,7 @@ if up is not None:
                     st.caption(n)
                 if v.get("heatmap"):
                     with st.expander("Where in the photo does water score highest? (coarse patch map)"):
-                        st.image(heatmap_overlay(vimg.image, v["heatmap"]), use_container_width=True)
+                        st.image(heatmap_overlay(vimg.image, v["heatmap"]), width="stretch")
                         st.caption("Blue = higher water score from 9 overlapping crops. Not pixel segmentation.")
                 st.caption("AI analysis never verifies a report on its own.")
 
@@ -77,7 +77,7 @@ elif mode == "Click on the map":
     pick = st.session_state.get("picked")
     if pick:
         folium.Marker(pick).add_to(m)
-    out = st_folium(m, height=360, use_container_width=True, returned_objects=["last_clicked"], key="pick_map")
+    out = st_folium(m, height=360, width="stretch", returned_objects=["last_clicked"], key="pick_map")
     if out and out.get("last_clicked"):
         st.session_state["picked"] = (out["last_clicked"]["lat"], out["last_clicked"]["lng"])
     if st.session_state.get("picked"):

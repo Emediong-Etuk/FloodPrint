@@ -70,7 +70,7 @@ left, right = st.columns([3, 2], gap="medium")
 with left:
     st.markdown("##### Flood overview map")
     m = build_map(R, df, risks, [h.to_dict() for h in hot])
-    st_folium(m, height=460, use_container_width=True, returned_objects=[], key="dash_map")
+    st_folium(m, height=460, width="stretch", returned_objects=[], key="dash_map")
     st.markdown(legend_html(), unsafe_allow_html=True)
 with right:
     st.markdown("##### Current rainfall")
@@ -86,7 +86,7 @@ with right:
                     marker_color=[C["accent"] if t <= now else "rgba(56,189,248,.4)" for t in h["time"]], name="mm/h")
         fig.add_vline(x=now, line_dash="dot", line_color=C["muted"])
         fig.update_yaxes(title="mm per hour")
-        st.plotly_chart(plotly_layout(fig, 230, "Hourly rainfall: past 48 h (solid) and forecast (light)"), use_container_width=True)
+        st.plotly_chart(plotly_layout(fig, 230, "Hourly rainfall: past 48 h (solid) and forecast (light)"), width="stretch")
         st.caption(f"Source: {snap.source}. Forecast values are model estimates.")
     else:
         st.info("No weather data to display.")
@@ -136,5 +136,5 @@ if not df.empty:
         if s in t:
             fig.add_bar(x=t.index, y=t[s], name=s.title(), marker_color=STATUS_COLORS[s])
     fig.update_layout(barmode="stack")
-    st.plotly_chart(plotly_layout(fig, 260, "Reported incidents per quarter"), use_container_width=True)
+    st.plotly_chart(plotly_layout(fig, 260, "Reported incidents per quarter"), width="stretch")
 disclaimer()
