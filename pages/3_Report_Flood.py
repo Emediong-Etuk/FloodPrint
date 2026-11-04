@@ -73,11 +73,11 @@ if mode == "Choose a neighbourhood":
     l = next(x for x in R.locations if x.name == loc)
     lat, lon, loc_name = l.lat, l.lon, loc
 elif mode == "Click on the map":
-    m = folium.Map([R.center_lat, R.center_lon], zoom_start=R.default_zoom, tiles="CartoDB dark_matter")
+    m = folium.Map([R.center_lat, R.center_lon], zoom_start=R.default_zoom, tiles="OpenStreetMap")
     pick = st.session_state.get("picked")
     if pick:
         folium.Marker(pick).add_to(m)
-    out = st_folium(m, height=360, width="stretch", returned_objects=["last_clicked"], key="pick_map")
+    out = st_folium(m, height=360, use_container_width=True, returned_objects=["last_clicked"], key="pick_map")
     if out and out.get("last_clicked"):
         st.session_state["picked"] = (out["last_clicked"]["lat"], out["last_clicked"]["lng"])
     if st.session_state.get("picked"):

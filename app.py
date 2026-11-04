@@ -22,11 +22,11 @@ PAGES = Path(__file__).parent / "pages"
 nav = st.navigation(
     [
         st.Page(PAGES / "1_Dashboard.py", title="Dashboard", default=True),
-        st.Page(PAGES / "2_Live_Map.py", title="Live Flood Map"),
-        st.Page(PAGES / "3_Report_Flood.py", title="Report Flood"),
-        st.Page(PAGES / "4_Flood_Intelligence.py", title="Flood Intelligence"),
-        st.Page(PAGES / "5_Flood_Memory.py", title="Flood Memory"),
-        st.Page(PAGES / "6_Admin.py", title="Administration"),
+        st.Page(PAGES / "2_Live_Map.py", title="Live Flood Map", url_path="live-map"),
+        st.Page(PAGES / "3_Report_Flood.py", title="Report Flood", url_path="report"),
+        st.Page(PAGES / "4_Flood_Intelligence.py", title="Flood Intelligence", url_path="intelligence"),
+        st.Page(PAGES / "5_Flood_Memory.py", title="Flood Memory", url_path="memory"),
+        st.Page(PAGES / "6_Admin.py", title="Administration", url_path="admin"),
     ]
 )
 with st.sidebar:

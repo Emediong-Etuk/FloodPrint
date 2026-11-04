@@ -50,15 +50,15 @@ FLOODPRINT turns individual flood observations into shared, lasting intelligence
 
 ## 4. Screenshots
 
-| Dashboard | Live Flood Map |
+| Dashboard | Map layers: incidents + DBSCAN hotspots |
 |---|---|
-| ![Dashboard](assets/screenshots/dashboard.png) | ![Map](assets/screenshots/live_map.png) |
+| ![Dashboard](assets/screenshots/dashboard.png) | ![Map layers](assets/screenshots/map_layers.png) |
 | **Report Flood (AI analysis)** | **Flood Intelligence** |
 | ![Report](assets/screenshots/report_flood.png) | ![Intelligence](assets/screenshots/intelligence.png) |
 | **Flood Memory** | **Model information** |
 | ![Memory](assets/screenshots/flood_memory.png) | ![Model](assets/screenshots/model_info.png) |
 
-_Screenshots were taken in a sandbox that could not reach the map tile servers or Open-Meteo, so map backgrounds are blank and live-weather panels show their "unavailable" state. Both work normally when deployed._
+_Screenshots were taken in a build sandbox that could not reach Open-Meteo, the map tile servers or the Leaflet/jQuery CDNs. Live-weather panels therefore show their "unavailable" state (the designed fallback), the in-app map component did not render, and the map image above is the same Folium map object rendered on its own, without tiles. In a normal browser with internet access, tiles, maps and live weather load as usual. The photo is "Flooding in the streets of New Delhi" by NRDC pix, CC BY 2.0 (see `assets/samples/ATTRIBUTION.md`), from the vision model's held-out test split._
 
 ## 5. System architecture
 

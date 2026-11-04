@@ -21,8 +21,8 @@ def build_map(region: Region, incidents: pd.DataFrame | None = None, risks=None,
               height_center=None, zoom: int | None = None, current_days: int = 7) -> folium.Map:
     lat, lon = height_center or (region.center_lat, region.center_lon)
     m = folium.Map(location=[lat, lon], zoom_start=zoom or region.default_zoom, tiles=None, control_scale=True)
-    folium.TileLayer("CartoDB dark_matter", name="Dark basemap", attr="© OpenStreetMap contributors © CARTO").add_to(m)
     folium.TileLayer("OpenStreetMap", name="OpenStreetMap").add_to(m)
+    folium.TileLayer("CartoDB dark_matter", name="Dark basemap (CARTO)", attr="© OpenStreetMap contributors © CARTO").add_to(m)
 
     if risks:
         g = folium.FeatureGroup(name="Predicted risk (estimate)")

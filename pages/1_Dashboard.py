@@ -70,7 +70,7 @@ left, right = st.columns([3, 2], gap="medium")
 with left:
     st.markdown("##### Flood overview map")
     m = build_map(R, df, risks, [h.to_dict() for h in hot])
-    st_folium(m, height=460, width="stretch", returned_objects=[], key="dash_map")
+    st_folium(m, height=460, use_container_width=True, returned_objects=[], key="dash_map")
     st.markdown(legend_html(), unsafe_allow_html=True)
 with right:
     st.markdown("##### Current rainfall")

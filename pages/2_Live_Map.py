@@ -51,7 +51,7 @@ if focus != "Whole area":
 m = build_map(R, f, risks, hot, height_center=center, zoom=zoom)
 col_map, col_info = st.columns([3, 1.25], gap="medium")
 with col_map:
-    out = st_folium(m, height=620, width="stretch", returned_objects=["last_object_clicked"], key="live_map")
+    out = st_folium(m, height=620, use_container_width=True, returned_objects=["last_object_clicked"], key="live_map")
     st.markdown(legend_html(), unsafe_allow_html=True)
     st.caption(f"Showing {len(f)} of {len(df)} incident reports. {R.coordinate_note}")
 
