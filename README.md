@@ -9,7 +9,7 @@ AI-powered community flood intelligence and early warning for Port Harcourt, Riv
 | **Hackathon** | Neural Storm 2026 |
 | **Track** | Green Planet: Sustainability & Environmental Intelligence |
 | **Problem statement** | **GP-03: Flood & Drought Early Warning System** (flood focus) |
-| **Team name** | _add team name_ |
+| **Team name** | Neural Builders |
 | **Team members** | Emediong Etuk, _add other members_ |
 | **Primary language** | Python 3.11+ (all AI/ML in Python) |
 | **Live demo** | _add Streamlit Community Cloud link after deploying (see [Deployment](#14-deployment))_ |
