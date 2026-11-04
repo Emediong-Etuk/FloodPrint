@@ -52,7 +52,7 @@ def test_timeout_without_fallback_raises():
     svc = WeatherService(session=FakeSession(exc=requests.Timeout("timed out")))
     with pytest.raises(WeatherUnavailableError):
         svc.get(4.8, 7.0)
-    assert "timed out" in svc.last_error
+    assert "did not respond" in svc.last_error
 
 
 def test_timeout_falls_back_to_stale_stored_observation(conn, payload):
@@ -60,7 +60,7 @@ def test_timeout_falls_back_to_stale_stored_observation(conn, payload):
     good.get(4.8156, 7.0122)
     bad = WeatherService(conn_factory=lambda: conn, session=FakeSession(exc=requests.Timeout("down")))
     snap = bad.get(4.8156, 7.0122)
-    assert snap.stale and snap.stale_reason == "down"
+    assert snap.stale and "did not respond" in snap.stale_reason
     assert snap.temperature_c == 27.5  # the stored value, not an invented one
 
 

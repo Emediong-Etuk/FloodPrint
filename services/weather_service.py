@@ -298,10 +298,15 @@ class WeatherService:
                     self._store(snap)
                 self.last_error = None
             except (requests.RequestException, WeatherDataError, ValueError) as exc:
-                self.last_error = str(exc)
+                if isinstance(exc, requests.Timeout):
+                    self.last_error = "Open-Meteo did not respond in time"
+                elif isinstance(exc, requests.RequestException):
+                    self.last_error = "Could not reach Open-Meteo (network error)"
+                else:
+                    self.last_error = f"Open-Meteo returned unusable data: {str(exc)[:120]}"
                 log.warning("Open-Meteo request failed: %s", exc)
                 for i in todo:
-                    results[i] = self._fallback(*pts[i], reason=str(exc))
+                    results[i] = self._fallback(*pts[i], reason=self.last_error)
         return results
 
     def get(self, lat: float, lon: float) -> WeatherSnapshot:
