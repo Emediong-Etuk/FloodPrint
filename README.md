@@ -12,7 +12,7 @@ AI-powered community flood intelligence and early warning for Port Harcourt, Riv
 | **Team name** | Neural Builders |
 | **Team members** | Emediong Etuk, _add other members_ |
 | **Primary language** | Python 3.11+ (all AI/ML in Python) |
-| **Live demo** | _add Streamlit Community Cloud link after deploying (see [Deployment](#14-deployment))_ |
+| **Live demo** | https://floodprint-yy.streamlit.app |
 
 > FLOODPRINT provides experimental environmental risk intelligence based on available weather information, historical observations, and machine learning models. Predictions are estimates, not guarantees. Always follow official emergency instructions and verify local conditions before travelling.
 
@@ -164,7 +164,7 @@ Python 3.11+, Streamlit, Pandas, NumPy, scikit-learn (Random Forest, logistic re
 | Flood events | DFO Global Active Archive of Large Flood Events, G.R. Brakenridge, Univ. of Colorado (`FloodArchive.xlsx`, 1985–2021, from a public GitHub mirror) | Free for research use with attribution | Risk labels; recent-flood feature |
 | Flood photos | Google Open Images V7 human-verified labels; images from the public S3 mirror | Annotations CC BY 4.0; images CC BY 2.0 (per author) | Vision head training and evaluation. Only image IDs are committed (`data/processed/vision_dataset_manifest.csv`) |
 | Vision backbone | [OpenCLIP](https://github.com/mlfoundations/open_clip) ViT-B/32 LAION-400M | MIT (code), released weights | Image embeddings |
-| Basemap | OpenStreetMap / CARTO tiles | ODbL / CARTO terms | Map display |
+| Basemap | OpenStreetMap tiles (default), Esri World Imagery (optional) | ODbL / Esri terms of use | Map display |
 | Neighbourhoods | Approximate centroids of 18 Port Harcourt areas (`config/regions/port_harcourt.json`) | — | Monitoring points; not surveyed boundaries |
 
 ## 9. Demonstration data
