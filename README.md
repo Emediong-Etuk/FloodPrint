@@ -16,6 +16,8 @@ AI-powered community flood intelligence and early warning for Port Harcourt, Riv
 
 > FLOODPRINT provides experimental environmental risk intelligence based on available weather information, historical observations, and machine learning models. Predictions are estimates, not guarantees. Always follow official emergency instructions and verify local conditions before travelling.
 
+> **New: [FloodPrint Room](floodroom/README.md)** (Flip the Switch Hackathon). FloodPrint as an AI teammate inside the neighbourhood group chat, run by [Switch](https://github.com/sandbox-quantum/switch) and Claude Code. Residents report floods by message or photo, and the agent confirms them, answers "which road should I avoid?", and remembers every flood.
+
 ---
 
 ## 1. Problem

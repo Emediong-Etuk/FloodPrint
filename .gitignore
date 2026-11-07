@@ -12,3 +12,6 @@ data/models/openclip/
 data/*.db
 data/*.db-*
 *.part
+
+# FloodPrint Room: residents' reports stay local
+floodroom/reports.jsonl
